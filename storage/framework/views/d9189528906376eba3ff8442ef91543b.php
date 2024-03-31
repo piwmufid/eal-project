@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>English Area of Latee | {{ $title }}</title>
+    <title>English Area of Latee | <?php echo e($title); ?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    {{-- <link href="assets/img/favicon.png" rel="icon"> --}}
+    
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -35,13 +35,13 @@
 
 <body>
 
-    @include('components.arsip.navbar')
+    <?php echo $__env->make('components.arsip.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
         
         <ul class="sidebar-nav" id="sidebar-nav">
-            @include('components.arsip.sidebar')
+            <?php echo $__env->make('components.arsip.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </ul>
 
     </aside><!-- End Sidebar-->
@@ -53,10 +53,10 @@
             <nav>
                 <ol class="breadcrumb">
                     <a class="breadcrumb-item" href="/">Home</a>
-                    <a class="breadcrumb-item {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">Dashboard</a>
-                    @if (Request::is('speaking'))
-                        <a class="breadcrumb-item active" href="">{{ $title }}</a>
-                    @endif
+                    <a class="breadcrumb-item <?php echo e(Request::is('dashboard') ? 'active' : ''); ?>" href="/dashboard">Dashboard</a>
+                    <?php if(Request::is('speaking')): ?>
+                        <a class="breadcrumb-item active" href=""><?php echo e($title); ?></a>
+                    <?php endif; ?>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        @yield('main')
+        <?php echo $__env->yieldContent('main'); ?>
 
     </main><!-- End #main -->
 
@@ -99,10 +99,11 @@
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    {{-- <script src="assets/vendor/php-email-form/validate.js"></script> --}}
+    
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
 </body>
 
 </html>
+<?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/layouts/dashboard.blade.php ENDPATH**/ ?>

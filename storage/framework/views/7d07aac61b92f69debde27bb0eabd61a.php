@@ -56,3 +56,4 @@
         </div>
     </div>
 </div>
+<?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/home/testimonial.blade.php ENDPATH**/ ?>

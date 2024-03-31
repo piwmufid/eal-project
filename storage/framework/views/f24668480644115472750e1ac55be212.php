@@ -35,3 +35,4 @@
     </div>
 </div>
 <!-- Footer End -->
+<?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/home/footer.blade.php ENDPATH**/ ?>

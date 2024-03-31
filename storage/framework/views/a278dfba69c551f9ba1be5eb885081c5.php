@@ -27,3 +27,4 @@
     </nav><!-- End Icons Navigation -->
 
 </header><!-- End Header -->
+<?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/arsip/navbar.blade.php ENDPATH**/ ?>
