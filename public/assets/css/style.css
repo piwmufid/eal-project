@@ -305,7 +305,7 @@ h6 {
 
 /* Breadcrumbs */
 .breadcrumb {
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Nunito", sans-serif;
   color: #899bbd;
   font-weight: 600;
@@ -317,7 +317,7 @@ h6 {
 }
 
 .breadcrumb a:hover {
-  color: #51678f;
+  color: #50C4ED;
 }
 
 .breadcrumb .breadcrumb-item::before {
@@ -365,15 +365,22 @@ h6 {
 }
 
 .logo img {
-  max-height: 26px;
+  max-height: 50px;
   margin-right: 6px;
 }
 
 .logo span {
-  font-size: 26px;
+  font-size: 15px;
   font-weight: 700;
   color: #012970;
   font-family: "Nunito", sans-serif;
+  padding-left: 3px;
+}
+
+.logo span .span-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 12px; 
 }
 
 .header {
@@ -602,7 +609,7 @@ h6 {
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 250px;
   z-index: 996;
   transition: all 0.3s;
   padding: 20px;
@@ -671,6 +678,12 @@ h6 {
   margin-bottom: 5px;
 }
 
+.sidebar-nav .nav-item .active{
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  color: #ffff;
+  background: #50C4ED;
+}
+
 .sidebar-nav .nav-heading {
   font-size: 11px;
   text-transform: uppercase;
@@ -682,7 +695,7 @@ h6 {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   color: #4154f1;
   transition: 0.3;
@@ -692,27 +705,13 @@ h6 {
 }
 
 .sidebar-nav .nav-link i {
-  font-size: 16px;
-  margin-right: 10px;
-  color: #4154f1;
-}
-
-.sidebar-nav .nav-link.collapsed {
-  color: #012970;
-  background: #fff;
-}
-
-.sidebar-nav .nav-link.collapsed i {
-  color: #899bbd;
+  font-size: 12px;
+  margin-right: 10px
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
-}
-
-.sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+  color: #ffff;
+  background: #50C4ED;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -1215,7 +1214,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   padding: 20px 0;
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.3s;
   border-top: 1px solid #cddfff;
 }
@@ -1225,9 +1224,25 @@ h6 {
   color: #012970;
 }
 
+.footer .copyright a{
+  color: #50C4ED;
+}
+
 .footer .credits {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: #012970;
+}
+
+/* TOMOL DOWNLOAD KELAS */
+.btn-download {
+  padding: .1.5rem;
+  font-size: 11px;
+  border-color: #50C4ED
+}
+
+.btn-download:hover{
+  color: #fff;
+  background: #50C4ED;
 }

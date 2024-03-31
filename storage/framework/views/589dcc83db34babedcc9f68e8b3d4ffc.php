@@ -1,9 +1,7 @@
-@extends('layouts.dashboard')
-{{-- @foreach ($books as $book)
-    {{ dd($book->nama_buku) }}
-@endforeach --}}
 
-@section('main')
+
+
+<?php $__env->startSection('main'); ?>
 <!-- Recent Sales -->
 <div class="col-12">
     <div class="card recent-sales overflow-auto">
@@ -22,16 +20,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($books as $book)
+                    <?php $__currentLoopData = $books; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $book): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                             <th scope="row"><a href="#">1</a></th>
-                            <td>{{ $kelas->nama_kelas }}</td>
-                            <td><a href="#" class="text-primary">{{ $book->nama_buku }}</a>
+                            <td><?php echo e($kelas->nama_kelas); ?></td>
+                            <td><a href="#" class="text-primary"><?php echo e($book->nama_buku); ?></a>
                             </td>
-                            <td>{{ $book->harga }}</td>
+                            <td><?php echo e($book->harga); ?></td>
                             <td><a class="shadow rounded btn btn-download">Download</a></td>
                         </tr>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
             </table>
 
@@ -39,4 +37,5 @@
 
     </div>
 </div><!-- End Recent Sales -->
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/arsip/speaking.blade.php ENDPATH**/ ?>

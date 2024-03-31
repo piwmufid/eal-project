@@ -9,7 +9,7 @@
     <div class="card recent-sales overflow-auto">
 
         <div class="card-body">
-            <h5 class="card-title">Speaking Class <span>| Recent</span></h5>
+            <h5 class="card-title">Listening Class <span>| Recent</span></h5>
 
             <table class="table table-borderless datatable">
                 <thead>

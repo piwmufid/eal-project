@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\KelasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", function () {
-  return view("home", [
-    "title" => "Home"
+Route::get("/", function(){
+  return view('home', [
+    'title' => 'Home'
   ]);
 });
 
@@ -25,8 +27,7 @@ Route::get("/dashboard", function () {
   ]);
 });
 
-Route::get('/speaking', function () {
-    return view('components.arsip.speaking', [
-      'title' => 'Speaking'
-    ]);
-});
+Route::get('/speaking', [BukuController::class, 'speaking']);
+Route::get('/listening', [BukuController::class, 'listening']);
+Route::get('/reading', [BukuController::class, 'reading']);
+Route::get('/translation', [BukuController::class, 'translation']);
