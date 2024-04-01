@@ -47,23 +47,22 @@
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
-        
         <div class="pagetitle">
             <h1>Dashboard</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <a class="breadcrumb-item" href="/">Home</a>
+                    <a class="breadcrumb-item <?php echo e(Request::is('/') ? 'active' : ''); ?>" href="/">Home</a>
                     <a class="breadcrumb-item <?php echo e(Request::is('dashboard') ? 'active' : ''); ?>" href="/dashboard">Dashboard</a>
-                    <?php if(Request::is('speaking')): ?>
+                    <?php if(Request::is('speaking')||Request::is('listening')||Request::is('reading')||Request::is('translation')): ?>
                         <a class="breadcrumb-item active" href=""><?php echo e($title); ?></a>
                     <?php endif; ?>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
 
-        <div class="container rounded shadow p-3 mb-3 d-flex align-items-center">
+        <div class="bg-white rounded shadow p-3 mb-3 d-flex align-items-center">
             <img src="svg/dashboard.svg" alt="dashboard" width="90px">
-            <div class="container ">
+            <div>
                 <h4 class="text-primary fw-bold fz-12">Welcome to!</h6>
                 <h6>Sistem Informasi Arsip English Area of Latee</h6>
             </div>
@@ -79,10 +78,6 @@
             &copy; Copyright <strong><span>English Area of Latee</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
             Created by <a href="https://github.com/Lonjher">EAL Devoloper</a>
         </div>
     </footer>

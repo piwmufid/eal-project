@@ -10,6 +10,11 @@
 
         <div class="card-body">
             <h5 class="card-title">Listening Class <span>| Recent</span></h5>
+            @can('admin')
+                <div class="container d-flex justify-content-end">
+                    <a class="btn btn-primary"><i class="bi bi-plus-circle mx-1"></i> Add Book</a>
+                </div>                
+            @endcan
 
             <table class="table table-borderless datatable">
                 <thead>
@@ -29,7 +34,7 @@
                             <td><a href="#" class="text-primary">{{ $book->nama_buku }}</a>
                             </td>
                             <td>{{ $book->harga }}</td>
-                            <td><a class="shadow rounded btn btn-download">Download</a></td>
+                            <td><a href="{{ $book->src }}" download="{{ $book->nama_buku }}" target="_blank" class="shadow rounded btn btn-download">Download</a></td>
                         </tr>
                     @endforeach
                 </tbody>

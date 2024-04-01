@@ -26,4 +26,16 @@
         </ul>
     </nav><!-- End Icons Navigation -->
 
+    <div class="mx-5 d-flex justify-content-center align-items-center">
+        @auth
+            <div class="rounded-circle mx-2">
+                <img src="{{ auth()->user()->avatar }}" alt="avatar" width="40px" class="rounded-circle">
+            </div>
+            <div class="d-flex flex-column justify-content-center lh-1 ailgn-items-center profil">
+                <span class="fw-bold text-primary">{{ auth()->user()->nama }} <br></span>
+                <span class="span-text">{{ auth()->user()->roles->nama_role }}</span>
+            </div>
+        @endauth
+    </div>
+
 </header><!-- End Header -->

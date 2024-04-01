@@ -51,12 +51,25 @@
 
 <li class="nav-heading py-2 text-secondary">MASTER</li>
 
-<li class="nav-item">
-    <a class="nav-link <?php echo e(Request::is('login') ? 'active' : ''); ?>" href="pages-login.html">
-        <i class="bi bi-box-arrow-in-right"></i>
-        <span>Login</span>
-    </a>
-</li><!-- End Login Page Nav -->
+<?php if(Route::has('login') && Route::has('logout')): ?>
+    <?php if(auth()->guard()->check()): ?>
+    <li class="nav-item">
+            <form action="<?php echo e(route('logout')); ?>" method="POST">
+            <?php echo csrf_field(); ?>
+            <button class="nav-link button <?php echo e(Request::is('login') ? 'active' : ''); ?>">
+                <i class="bi bi-box-arrow-in-right"></i>Logout</button>
+        </li>
+        </form>
+    <?php else: ?>
+        <li class="nav-item">
+            <a class="nav-link <?php echo e(Request::is('login') ? 'active' : ''); ?>" href="<?php echo e(route('login')); ?>">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Login</span>
+            </a>
+        </li>
+    <?php endif; ?>
+<?php endif; ?>
+
 
 
 <?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/arsip/sidebar.blade.php ENDPATH**/ ?>

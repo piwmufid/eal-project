@@ -26,5 +26,17 @@
         </ul>
     </nav><!-- End Icons Navigation -->
 
+    <div class="mx-5 d-flex justify-content-center align-items-center">
+        <?php if(auth()->guard()->check()): ?>
+            <div class="rounded-circle mx-2">
+                <img src="<?php echo e(auth()->user()->avatar); ?>" alt="avatar" width="40px" class="rounded-circle">
+            </div>
+            <div class="d-flex flex-column justify-content-center lh-1 ailgn-items-center profil">
+                <span class="fw-bold text-primary"><?php echo e(auth()->user()->nama); ?> <br></span>
+                <span class="span-text"><?php echo e(auth()->user()->roles->nama_role); ?></span>
+            </div>
+        <?php endif; ?>
+    </div>
+
 </header><!-- End Header -->
 <?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/arsip/navbar.blade.php ENDPATH**/ ?>

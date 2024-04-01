@@ -1,7 +1,10 @@
 
 
-<?php $__env->startSection('hero'); ?>
-				<?php echo $__env->make('components.home.hero', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php $__env->startSection('nav-hero'); ?>
+        <div class="container-fluid position-relative p-0">
+          <?php echo $__env->make('components.home.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+          <?php echo $__env->make('components.home.hero', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        </div>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('main'); ?>
