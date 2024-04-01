@@ -8,6 +8,11 @@
 
         <div class="card-body">
             <h5 class="card-title">Listening Class <span>| Recent</span></h5>
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('admin')): ?>
+                <div class="container d-flex justify-content-end">
+                    <a class="btn btn-primary"><i class="bi bi-plus-circle mx-1"></i> Add Book</a>
+                </div>                
+            <?php endif; ?>
 
             <table class="table table-borderless datatable">
                 <thead>
@@ -27,7 +32,7 @@
                             <td><a href="#" class="text-primary"><?php echo e($book->nama_buku); ?></a>
                             </td>
                             <td><?php echo e($book->harga); ?></td>
-                            <td><a class="shadow rounded btn btn-download">Download</a></td>
+                            <td><a href="<?php echo e($book->src); ?>" download="<?php echo e($book->nama_buku); ?>" target="_blank" class="shadow rounded btn btn-download">Download</a></td>
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>

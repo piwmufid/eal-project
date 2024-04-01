@@ -37,10 +37,7 @@
 <body>
     <div class="container-fluid  bg-white p-0">
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            @include('components.home.navbar')
-            @yield('hero')
-        </div>
+        @yield('nav-hero')
         <!-- Navbar & Hero End -->
 
         @yield('main')

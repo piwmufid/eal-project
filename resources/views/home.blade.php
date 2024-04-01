@@ -1,7 +1,10 @@
 @extends('layouts.main')
 
-@section('hero')
-				@include('components.home.hero')
+@section('nav-hero')
+        <div class="container-fluid position-relative p-0">
+          @include('components.home.navbar')
+          @include('components.home.hero')
+        </div>
 @endsection
 
 @section('main')

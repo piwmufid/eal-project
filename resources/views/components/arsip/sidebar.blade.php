@@ -51,12 +51,24 @@
 {{-- #---------------------# --}}
 <li class="nav-heading py-2 text-secondary">MASTER</li>
 
-<li class="nav-item">
-    <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="pages-login.html">
-        <i class="bi bi-box-arrow-in-right"></i>
-        <span>Login</span>
-    </a>
-</li><!-- End Login Page Nav -->
+@if (Route::has('login') && Route::has('logout'))
+    @auth
+    <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="nav-link button {{ Request::is('login') ? 'active' : '' }}">
+                <i class="bi bi-box-arrow-in-right"></i>Logout</button>
+        </li>
+        </form>
+    @else
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('login') }}">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Login</span>
+            </a>
+        </li>
+    @endauth
+@endif
 
 {{-- Start Master Section --}}
 {{-- #---------------------# --}}

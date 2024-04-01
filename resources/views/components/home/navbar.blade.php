@@ -19,6 +19,13 @@
                 </div>
             </div>
         </div>
-        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Learn More</a>
+        @auth
+            <form action="{{ route('logout') }}" method="POST">
+            @csrf
+                <button type="submit" class="btn btn-sm btn-danger text-capitalize rounded-pill py-2 px-5">Logout</button>
+            </form>
+        @else    
+            <a href="{{ route('login') }}" class="btn btn-sm btn-primary text-capitalize rounded-pill py-2 px-5">Login</a>
+        @endauth
     </div>
 </nav>

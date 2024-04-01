@@ -24,98 +24,77 @@ class BukuSeeder extends Seeder
                 'nama_buku' => "Speaking Book 1",
                 'id_kelas' => $speaking,
                 'harga' => 15000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
+                'src' => 'kelas/speaking/speaking_book_1.pdf',
                 'kategori' => 'speaking'
             ],
             [
                 'nama_buku' => "Speaking Book 2",
                 'id_kelas' => $speaking,
                 'harga' => 30000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
+                'src' => 'kelas/speaking/speaking_book_2.pdf',
                 'kategori' => 'speaking'
             ],
             [
                 'nama_buku' => "Irregular Verbs",
                 'id_kelas' => $speaking,
                 'harga' => 35000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
-                'kategori' => 'speaking'
-            ],
-            [
-                'nama_buku' => "English-Indo Dict.",
-                'id_kelas' => $speaking,
-                'harga' => 100000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
-                'kategori' => 'speaking'
-            ],
-            [
-                'nama_buku' => "Indo-English Dict.",
-                'id_kelas' => $speaking,
-                'harga' => 100000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
-                'kategori' => 'speaking'
-            ],
-            [
-                'nama_buku' => "Oxford Learner's Pocket Dict.",
-                'id_kelas' => $speaking,
-                'harga' => 75000,
-                'src' => 'G:\EAL\B U K U  E A L\SPEAKING/Speaking_Book_1.pdf',
+                'src' => 'kelas/speaking/irregular_verbs.pdf',
                 'kategori' => 'speaking'
             ],
             [
                 'nama_buku' => "British Council Book",
                 'id_kelas' => $listening,
                 'harga' => 20000,
-                'src' => 'G:\EAL\B U K U  E A L\ir PACK/perfect.pdf',
+                'src' => '#',
                 'kategori' => 'listening'
             ],
             [
-                'nama_buku' => "Hand Book of Reading",
+                'nama_buku' => "A Guide of Grammar Comprehension",
                 'id_kelas' => $reading,
                 'harga' => 25000,
-                'src' => 'G:\EAL\B U K U  E A L\READING/Grammar_Book_1_2.pdf',
+                'src' => 'kelas/reading/grammar_book_1_2.pdf',
                 'kategori' => 'reading'
             ],
             [
                 'nama_buku' => "Modern English",
                 'id_kelas' => $reading,
                 'harga' => 70000,
-                'src' => 'G:\EAL\B U K U  E A L\READING/Grammar_Book_1_2.pdf',
+                'src' => '#',
                 'kategori' => 'reading'
             ],
             [
                 'nama_buku' => "Practical English Usage",
                 'id_kelas' => $reading,
                 'harga' => 90000,
-                'src' => 'G:\EAL\B U K U  E A L\READING/Grammar_Book_1_2.pdf',
+                'src' => '#',
                 'kategori' => 'reading'
             ],
             [
                 'nama_buku' => "Reading Texts",
                 'id_kelas' => $reading,
                 'harga' => 5000,
-                'src' => 'G:\EAL\B U K U  E A L\READING/Grammar_Book_1_2.pdf',
+                'src' => '#',
                 'kategori' => 'reading'
             ],
             [
                 'nama_buku' => "Be Familiar with English Translation",
                 'id_kelas' => $translation,
                 'harga' => 12000,
-                'src' => 'G:\EAL\B U K U  E A L\TRANSLATION/TRANSLATION_BOOK.pdf',
+                'src' => 'kelas/translation/translation_book.pdf',
                 'kategori' => 'translation'
             ],
             [
-                'nama_buku' => "How to Write",
+                'nama_buku' => "How to Write English",
                 'id_kelas' => $translation,
                 'harga' => 15000,
-                'src' => 'G:\EAL\B U K U  E A L\TRANSLATION/TRANSLATION_BOOK.pdf',
+                'src' => 'kelas/translation/writting_book.pdf',
                 'kategori' => 'translation'
             ],
             [
                 'nama_buku' => "Let's Write English",
                 'id_kelas' => $translation,
                 'harga' => 50000,
-                'src' => 'G:\EAL\B U K U  E A L\TRANSLATION/TRANSLATION_BOOK.pdf',
+                'src' => '#',
                 'kategori' => 'translation'
             ],
         ];

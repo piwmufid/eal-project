@@ -19,7 +19,14 @@
                 </div>
             </div>
         </div>
-        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Learn More</a>
+        <?php if(auth()->guard()->check()): ?>
+            <form action="<?php echo e(route('logout')); ?>" method="POST">
+            <?php echo csrf_field(); ?>
+                <button type="submit" class="btn btn-sm btn-danger text-capitalize rounded-pill py-2 px-5">Logout</button>
+            </form>
+        <?php else: ?>    
+            <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-primary text-capitalize rounded-pill py-2 px-5">Login</a>
+        <?php endif; ?>
     </div>
 </nav>
 <?php /**PATH G:\PRODUCTIVE\MY PROJECT\LARAVEL\eal-project\resources\views/components/home/navbar.blade.php ENDPATH**/ ?>

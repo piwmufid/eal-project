@@ -43,8 +43,9 @@ h6 {
 --------------------------------------------------------------*/
 #main {
   margin-top: 60px;
-  padding: 20px 30px;
+  padding: 20px 20px 0px 0px;
   transition: all 0.3s;
+  background-color: inherit;
 }
 
 @media (max-width: 1199px) {
@@ -329,7 +330,7 @@ h6 {
   font-weight: 600;
 }
 
-/* Bordered Tabs */
+/* Bordered Tabs
 .nav-tabs-bordered {
   border-bottom: 2px solid #ebeef4;
 }
@@ -349,7 +350,7 @@ h6 {
   background-color: #fff;
   color: #4154f1;
   border-bottom: 2px solid #4154f1;
-}
+} */
 
 /*--------------------------------------------------------------
 # Header
@@ -381,6 +382,13 @@ h6 {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 12px; 
+}
+
+.profil .span-text{
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -708,6 +716,13 @@ h6 {
   font-size: 12px;
   margin-right: 10px
 }
+
+.sidebar-nav .nav-item .button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 
 .sidebar-nav .nav-link:hover {
   color: #ffff;

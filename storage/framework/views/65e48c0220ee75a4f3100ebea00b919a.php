@@ -37,10 +37,7 @@
 <body>
     <div class="container-fluid  bg-white p-0">
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <?php echo $__env->make('components.home.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <?php echo $__env->yieldContent('hero'); ?>
-        </div>
+        <?php echo $__env->yieldContent('nav-hero'); ?>
         <!-- Navbar & Hero End -->
 
         <?php echo $__env->yieldContent('main'); ?>
