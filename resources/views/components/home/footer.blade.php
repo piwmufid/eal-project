@@ -26,16 +26,9 @@
     <div class="container-fluid">
         <div class="copyright">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-center text-sm-start mb-3 mb-md-0">
                     &copy; <a class="border-bottom" href="#">EAL</a>, All Right Reserved.
-                    Designed By <a class="border-bottom" href="https://github.com/Lonjher">EAL Developers</a></a></div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a href="">Home</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
+                    Designed By <a class="border-bottom" href="https://github.com/Lonjher">EAL Developers</a></a>
                 </div>
             </div>
         </div>

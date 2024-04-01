@@ -1,7 +1,10 @@
 @extends('layouts.main')
 
-@section('hero')
-				@include('components.home.hero')
+@section('nav-hero')
+        <div class="container-fluid position-relative p-0">
+          @include('components.home.navbar')
+          @include('components.home.hero')
+        </div>
 @endsection
 
 @section('main')
@@ -13,14 +16,9 @@
         @include("components.home.about")
         <!-- About End -->
 
-        <!-- Menu Start -->
-        @include("components.home.menu")
-        <!-- Menu End -->
-
         <!-- Team Start -->
         @include('components.home.heroes')
         <!-- Team End -->
-
 
         <!-- Testimonial Start -->
         @include('components.home.testimonial')
@@ -31,6 +29,6 @@
         <!-- Comments End -->
         
         <!-- Back to Top -->
-        <a href="#" class="btn rounded-circle btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i>
+        <a href="#" class="btn rounded-circle btn-primary back-to-top"><i class="bi bi-arrow-up"></i>
         </a>
 @endsection

@@ -1,12 +1,12 @@
 <li class="nav-item">
-    <a class="nav-link shadow" href="/dashboard">
+    <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
     </a>
 </li><!-- End Dashboard Nav -->
 
 <li class="nav-item">
-    <a class="nav-link" href="/">
+    <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="/">
         <i class="bi bi-house-door"></i>
         <span>Home</span>
     </a>
@@ -17,28 +17,28 @@
 <li class="nav-heading py-2 text-secondary">ARCHIVE</li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed active" href="/speaking">
+    <a class="nav-link {{ Request::is('speaking') ? 'active' : '' }}" href="/speaking">
         <i class="bi bi-person"></i>
         <span>Speaking</span>
     </a>
 </li><!-- End Speaking Page Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="/listening">
+    <a class="nav-link {{ Request::is('listening') ? 'active' : '' }}" href="/listening">
         <i class="bi bi-headphones"></i>
         <span>Listening</span>
     </a>
 </li><!-- End Listening Page Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="/reading">
+    <a class="nav-link {{ Request::is('reading') ? 'active' : '' }}" href="/reading">
         <i class="bi bi-book"></i>
         <span>Reading</span>
     </a>
 </li><!-- End Reading Page Nav -->
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="/translation">
+    <a class="nav-link {{ Request::is('translation') ? 'active' : '' }}" href="/translation">
         <i class="bi bi-translate"></i>
         <span>Translation</span>
     </a>
@@ -51,12 +51,24 @@
 {{-- #---------------------# --}}
 <li class="nav-heading py-2 text-secondary">MASTER</li>
 
-<li class="nav-item">
-    <a class="nav-link collapsed" href="pages-login.html">
-        <i class="bi bi-box-arrow-in-right"></i>
-        <span>Login</span>
-    </a>
-</li><!-- End Login Page Nav -->
+@if (Route::has('login') && Route::has('logout'))
+    @auth
+    <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="nav-link button {{ Request::is('login') ? 'active' : '' }}">
+                <i class="bi bi-box-arrow-in-right"></i>Logout</button>
+        </li>
+        </form>
+    @else
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('login') }}">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Login</span>
+            </a>
+        </li>
+    @endauth
+@endif
 
 {{-- Start Master Section --}}
 {{-- #---------------------# --}}
