@@ -1,14 +1,21 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" novalidate>
         @csrf
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <x-input-label for="nama" :value="__('Name')" />
+            <x-text-input id="nama" class="block mt-1 w-full" type="text" name="nama" :value="old('nama')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('nama')" class="mt-2" />
         </div>
 
+        <!-- Generasi -->
+        <div class="mt-4">
+            <x-input-label for="generasi" :value="__('Generation')" />
+            <x-text-input id="generasi" class="block mt-1 w-full" type="text" name="generasi" :value="old('generasi')" required autofocus autocomplete="generasi" />
+            <x-input-error :messages="$errors->get('generasi')" class="mt-2" />
+        </div>
+ 
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
@@ -40,8 +47,9 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
+            <span class="text-sm">Already have an account?</span>
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
+                {{ __('Login') }}
             </a>
 
             <x-primary-button class="ms-4">
