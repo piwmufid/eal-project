@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,9 @@ Route::get('/speaking', [BukuController::class, 'speaking']);
 Route::get('/listening', [BukuController::class, 'listening']);
 Route::get('/reading', [BukuController::class, 'reading']);
 Route::get('/translation', [BukuController::class, 'translation']);
+Route::get('/profil/{id}', [ProfileController::class, 'edit']);
+Route::post('profile.update', [ProfileController::class, 'update'])->name('profile.update');
+Route::post('profile.destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 Route::middleware('guest')->group(function () {
   Route::get('register', [RegisteredUserController::class, 'create'])

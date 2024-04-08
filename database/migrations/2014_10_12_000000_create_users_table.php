@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('generasi');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->foreignId('role_id')->default(2);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

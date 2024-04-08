@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0 pe-4">
             <a href="/home" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Blog</a>
+            <a href="/fix" class="nav-item nav-link">Blog</a>
             <a href="/dashboard" class="nav-item nav-link">Archive</a></a>
             <a href="#menu" class="nav-item nav-link">Menu</a>
             <div class="nav-item dropdown">

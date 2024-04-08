@@ -32,8 +32,8 @@
                 <img src="{{ auth()->user()->avatar }}" alt="avatar" width="40px" class="rounded-circle">
             </div>
             <div class="d-flex flex-column justify-content-center lh-1 ailgn-items-center profil">
-                <span class="fw-bold text-primary">{{ auth()->user()->nama }} <br></span>
-                <span class="span-text">{{ auth()->user()->roles->nama_role }}</span>
+                <span class="text-primary">{{ auth()->user()->nama }} <br></span>
+                <span class="span-text" style="font-size: 13px">{{ auth()->user()->roles->nama_role }}</span>
             </div>
         @endauth
     </div>

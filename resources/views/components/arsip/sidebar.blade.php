@@ -10,6 +10,12 @@
         <i class="bi bi-house-door"></i>
         <span>Home</span>
     </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="/profil/{{ auth()->user()->id }}">
+        <i class="bi bi-people"></i>
+        <span>Profile</span>
+    </a>
 </li><!-- End Dashboard Nav -->
 
 {{-- Start Archive Section --}}
@@ -53,13 +59,21 @@
 
 @if (Route::has('login') && Route::has('logout'))
     @auth
-    <li class="nav-item">
-            <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button class="nav-link button {{ Request::is('login') ? 'active' : '' }}">
-                <i class="bi bi-box-arrow-in-right"></i>Logout</button>
+        @can('admin')  
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('data-alumni') ? 'active' : '' }}" href="/data-alumni">
+                <i class="bi bi-translate"></i>
+                <span>Data Alumni</span>
+            </a>
         </li>
-        </form>
+        @endcan
+        <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="nav-link button {{ Request::is('login') ? 'active' : '' }}">
+                    <i class="bi bi-box-arrow-in-right"></i>Logout</button>
+            </form>
+        </li>
     @else
         <li class="nav-item">
             <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('login') }}">
