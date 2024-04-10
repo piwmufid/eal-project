@@ -11,12 +11,14 @@
         <span>Home</span>
     </a>
 </li>
+<?php if(auth()->guard()->check()): ?>
 <li class="nav-item">
-    <a class="nav-link <?php echo e(Request::is('profile') ? 'active' : ''); ?>" href="/profil/<?php echo e(auth()->user()->id); ?>">
+    <a class="nav-link <?php echo e(Request::is('profile') ? 'active' : ''); ?>" href="<?php echo e(route('profile.edit')); ?>">
         <i class="bi bi-people"></i>
         <span>Profile</span>
     </a>
-</li><!-- End Dashboard Nav -->
+</li><!-- End Dashboard Nav --> 
+<?php endif; ?>
 
 
 
