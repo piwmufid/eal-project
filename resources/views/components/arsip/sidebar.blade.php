@@ -11,12 +11,14 @@
         <span>Home</span>
     </a>
 </li>
+@auth
 <li class="nav-item">
-    <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="/profil/{{ auth()->user()->id }}">
+    <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="{{ route('profile.edit') }}">
         <i class="bi bi-people"></i>
         <span>Profile</span>
     </a>
-</li><!-- End Dashboard Nav -->
+</li><!-- End Dashboard Nav --> 
+@endauth
 
 {{-- Start Archive Section --}}
 {{-- #---------------------# --}}

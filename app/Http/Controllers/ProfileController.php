@@ -18,7 +18,7 @@ class ProfileController extends Controller
     {
         return view('profile.main', [
             'user' => $request->user(),
-            'title' => 'Profle'
+            'title' => 'Profile'
         ]);
     }
 
@@ -41,13 +41,13 @@ class ProfileController extends Controller
     /**
      * Delete the user's account.
      */
-    public function destroy($uuid): RedirectResponse
+    public function destroy(Request $request): RedirectResponse
     {
         $request->validateWithBag('userDeletion', [
             'password' => ['required', 'current_password'],
         ]);
 
-        $user = User::find($uuid);
+        $user = $request->user();
 
         Auth::logout();
 

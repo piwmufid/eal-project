@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class UserSeeder extends Seeder
 {
@@ -14,13 +16,14 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        $img = Storage::name('img/profil.jpg');
         $users = ([
             [
                 'nama' => 'Abdul Walid',
                 'generasi' => 'XX',
                 'email' => 'walid.lonjer@gmail.com',
                 'password' => Hash::make('123123'),
-                'avatar' => 'img/profil.jpg',
+                'avatar' => $img,
                 'role_id' => 1
             ],
             [
